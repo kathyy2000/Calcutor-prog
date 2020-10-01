@@ -12,6 +12,7 @@ void subtraction();
 void multiplication();
 void division();
 void modulus();
+void power();
 void calculator_operations();
  
 // Start of Main Program
@@ -45,6 +46,9 @@ int main()
                       break;
           
             case '?': modulus();
+                      break;
+          
+           case '^': power();
                       break;
             case 'H':
             case 'h': calculator_operations();
@@ -152,3 +156,17 @@ void modulus()
     printf("\nModulus of entered numbers = %d\n",d);
 }
  
+void power()
+{
+    double a,num, p;
+    printf("\nEnter two numbers to find the power \n");
+    printf("number: ");
+    scanf("%lf",&a);
+ 
+    printf("power : ");
+    scanf("%lf",&num);
+ 
+    p=pow(a,num);
+ 
+    printf("\n%lf to the power %lf = %lf \n",a,num,p);
+}
