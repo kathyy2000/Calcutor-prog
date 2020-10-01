@@ -11,6 +11,7 @@ void addition();
 void subtraction();
 void multiplication();
 void division();
+void modulus();
 void calculator_operations();
  
 // Start of Main Program
@@ -42,7 +43,9 @@ int main()
  
             case '/': division();
                       break;
- 
+          
+            case '?': modulus();
+                      break;
             case 'H':
             case 'h': calculator_operations();
                       break;
@@ -136,5 +139,16 @@ void division()
     scanf("%d", &b);
     d=a/b;
     printf("\nDivision of entered numbers=%d\n",d);
+}
+
+void modulus()
+{
+    int a, b, d=0; 
+    printf("\nPlease enter first number   : "); 
+    scanf("%d", &a); 
+    printf("Please enter second number  : "); 
+    scanf("%d", &b);
+    d=a%b;
+    printf("\nModulus of entered numbers = %d\n",d);
 }
  
