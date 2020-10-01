@@ -168,5 +168,5 @@ void power()
  
     p=pow(a,num);
  
-    printf("\n%lf to the power %lf = %lf \n",a,num,p);
+    printf("\n%lf too the power %lf = %lf \n",a,num,p);
 }
