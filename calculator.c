@@ -11,6 +11,8 @@ void addition();
 void subtraction();
 void multiplication();
 void division();
+void modulus();
+void power();
 void calculator_operations();
  
 // Start of Main Program
@@ -42,7 +44,12 @@ int main()
  
             case '/': division();
                       break;
- 
+          
+            case '?': modulus();
+                      break;
+          
+           case '^': power();
+                      break;
             case 'H':
             case 'h': calculator_operations();
                       break;
@@ -137,4 +144,29 @@ void division()
     d=a/b;
     printf("\nDivision of entered numbers=%d\n",d);
 }
+
+void modulus()
+{
+    int a, b, d=0; 
+    printf("\nPlease enter first number   : "); 
+    scanf("%d", &a); 
+    printf("Please enter second number  : "); 
+    scanf("%d", &b);
+    d=a%b;
+    printf("\nModulus of entered numbers = %d\n",d);
+}
  
+void power()
+{
+    double a,num, p;
+    printf("\nEnter two numbers to find the power \n");
+    printf("number: ");
+    scanf("%lf",&a);
+ 
+    printf("power : ");
+    scanf("%lf",&num);
+ 
+    p=pow(a,num);
+ 
+    printf("\n%lf too the power %lf = %lf \n",a,num,p);
+}
